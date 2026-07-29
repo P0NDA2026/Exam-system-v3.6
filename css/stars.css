@@ -1,0 +1,99 @@
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 105px 210px #FFF, 350px 800px #FFF, 1200px 300px #FFF, 800px 1500px #FFF, 300px 600px #FFF, 1500px 900px #FFF, 700px 100px #FFF, 1800px 400px #FFF, 200px 1700px #FFF, 1100px 1100px #FFF, 500px 1300px #FFF, 1400px 200px #FFF, 900px 600px #FFF, 100px 1000px #FFF;
+  animation: animStar 50s linear infinite;
+}
+
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 105px 210px #FFF, 350px 800px #FFF, 1200px 300px #FFF, 800px 1500px #FFF, 300px 600px #FFF, 1500px 900px #FFF, 700px 100px #FFF, 1800px 400px #FFF, 200px 1700px #FFF, 1100px 1100px #FFF, 500px 1300px #FFF, 1400px 200px #FFF, 900px 600px #FFF, 100px 1000px #FFF;
+}
+
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 200px 400px #FFF, 900px 1200px #FFF, 500px 100px #FFF, 1400px 800px #FFF, 300px 1600px #FFF, 1600px 500px #FFF;
+  animation: animStar 100s linear infinite;
+}
+
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 200px 400px #FFF, 900px 1200px #FFF, 500px 100px #FFF, 1400px 800px #FFF, 300px 1600px #FFF, 1600px 500px #FFF;
+}
+
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 300px 500px #FFF, 1100px 300px #FFF, 600px 1400px #FFF, 1300px 1000px #FFF;
+  animation: animStar 150s linear infinite;
+}
+
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 300px 500px #FFF, 1100px 300px #FFF, 600px 1400px #FFF, 1300px 1000px #FFF;
+}
+
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+}
+
+#title span {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}

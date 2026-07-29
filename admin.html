@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="icon" type="image/x-icon" href="icons/admin.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Panel</title>
+
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Admin Panel</h1>
+
+<!-- ======================================================
+ACCOUNT MANAGER
+====================================================== -->
+
+<form id="accountForm">
+
+<h2>
+
+Account Manager
+
+</h2>
+
+<label>
+
+Select Account
+
+</label>
+
+<select id="accountSelect">
+
+</select>
+
+<br><br>
+
+<input
+type="text"
+id="newAdminUsername"
+placeholder="Username">
+
+<br><br>
+
+<input
+type="password"
+id="newAdminPassword"
+placeholder="Password">
+
+<br><br>
+
+<div class="account-buttons">
+
+<button
+type="button"
+id="addAdmin">
+
+Add
+
+</button>
+
+<button
+type="button"
+id="editAdmin">
+
+Edit
+
+</button>
+
+<button
+type="button"
+id="deleteAdmin">
+
+Delete
+
+</button>
+<br>
+<hr>
+<br>
+<button
+type="button"
+id="logoutAdmin">
+
+Logout
+
+</button>
+<br>
+<hr>
+<br>
+</div>
+
+</form>
+
+<hr>
+
+<form id="settingsForm">
+
+<h2>Choose Active Stage</h2>
+
+<label>
+<input type="radio"
+name="stage"
+value="1st Preparatory">
+
+1st Preparatory
+</label>
+
+<label>
+<input type="radio"
+name="stage"
+value="2nd Preparatory">
+
+2nd Preparatory
+</label>
+
+<label>
+<input type="radio"
+name="stage"
+value="1st Secondary">
+
+1st Secondary
+</label>
+
+<label>
+<input type="radio"
+name="stage"
+value="2nd Secondary">
+
+2nd Secondary
+</label>
+
+<br><br>
+
+<h2>Exam Time</h2>
+
+<input
+type="number"
+id="examTime"
+min="1"
+value="15">
+
+<br><br>
+
+<label>
+
+<input
+type="checkbox"
+id="allowRetake">
+
+Allow Retake
+
+</label>
+
+<br><br>
+
+<button type="submit">
+
+Save Settings
+
+</button>
+
+</form>
+
+
+</div>
+
+<hr>
+
+<h2>Question Bank</h2>
+
+<div id="questionManager">
+
+<label>
+Stage
+</label>
+
+<select id="questionStage">
+
+<option>1st Preparatory</option>
+
+<option>2nd Preparatory</option>
+
+<option>1st Secondary</option>
+
+<option>2nd Secondary</option>
+
+</select>
+
+<br><br>
+
+<label>
+
+<input
+type="radio"
+name="questionType"
+value="radio"
+checked>
+
+Choose the Correct Answer
+
+</label>
+
+<br>
+
+<label>
+
+<input
+type="radio"
+name="questionType"
+value="checkbox">
+
+Choose TWO Correct Answers
+
+</label>
+
+<br><br>
+
+<textarea
+id="questionText"
+placeholder="Write Question"
+rows="3"></textarea>
+<br><br>
+
+<div id="optionsContainer">
+
+</div>
+
+<br>
+
+<button
+type="button"
+id="addOption">
+
+Add Option
+
+</button>
+
+<br><br>
+
+<div id="correctAnswers"></div>
+
+<br>
+
+<button
+id="saveQuestion"
+type="button">
+
+Save Question
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>Saved Questions</h2>
+
+<div id="questionsTable" class="questions-list"></div>
+
+<hr>
+
+<h2>Create Exam</h2>
+
+<div id="examBuilder"></div>
+
+<br>
+
+<button
+id="publishExam"
+type="button">
+
+Publish Exam
+
+</button>
+
+<hr>
+
+<h2>Results Management</h2>
+
+<button
+id="viewResults"
+type="button">
+
+📊 View All Results
+
+</button>
+
+
+
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

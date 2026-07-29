@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="icon" type="image/x-icon" href="icons/login.png">
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Login</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+USER TYPE
+========================= -->
+
+
+
+<div class="login-wrapper">
+    <div class="pill-radio-container">
+
+<input
+checked
+name="userType"
+id="studentMode"
+type="radio">
+
+<label for="studentMode">
+Student
+</label>
+
+<input
+name="userType"
+id="adminMode"
+type="radio">
+
+<label for="adminMode">
+Admin
+</label>
+
+<div class="pill-indicator"></div>
+
+</div>
+
+
+<!-- =========================
+STUDENT LOGIN
+========================= -->
+
+<form
+id="loginForm"
+class="container login-card">
+
+<h3 class="title2">
+What's your name
+</h3>
+
+<div class="inputbox">
+
+<input
+type="text"
+id="username"
+name="username"
+required
+autocomplete="off">
+
+<span>
+Username
+</span>
+
+<i></i>
+
+</div>
+
+<h1 class="title">
+
+Choose your stage
+
+</h1>
+
+<div class="radio-input">
+
+<label class="label">
+
+<input
+type="radio"
+name="stage"
+value="1st Preparatory"
+checked>
+
+<p class="text">
+
+1st Preparatory
+
+</p>
+
+</label>
+
+<label class="label">
+
+<input
+type="radio"
+name="stage"
+value="2nd Preparatory">
+
+<p class="text">
+
+2nd Preparatory
+
+</p>
+
+</label>
+
+<label class="label">
+
+<input
+type="radio"
+name="stage"
+value="1st Secondary">
+
+<p class="text">
+
+1st Secondary
+
+</p>
+
+</label>
+
+<label class="label">
+
+<input
+type="radio"
+name="stage"
+value="2nd Secondary">
+
+<p class="text">
+
+2nd Secondary
+
+</p>
+
+</label>
+
+</div>
+
+<button
+type="submit">
+
+Start Exam
+
+</button>
+
+</form>
+
+
+
+<!-- =========================
+ADMIN LOGIN
+========================= -->
+
+<form
+id="adminLoginForm"
+class="container login-card hidden">
+
+<h2 class="title">
+
+Admin Login
+
+</h2>
+
+<div class="inputbox">
+
+<input
+type="text"
+id="adminUsername"
+autocomplete="off"
+required>
+
+<span>
+
+Username
+
+</span>
+
+<i></i>
+
+</div>
+
+<div class="inputbox">
+
+<input
+type="password"
+id="adminPassword"
+required>
+
+<span>
+
+Password
+
+</span>
+
+<i></i>
+
+</div>
+
+<button
+type="submit">
+
+Login
+</button>
+
+</form>
+
+</div>
+<script src="js/login.js"></script>
+
+</body>
+</html>

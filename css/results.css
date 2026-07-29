@@ -1,0 +1,115 @@
+body{
+
+background:#202020;
+
+font-family:Arial;
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+
+padding:40px;
+
+}
+
+.container{
+
+width:900px;
+
+background:#2b2b2b;
+
+padding:30px;
+
+border-radius:20px;
+
+}
+
+h1,h2{
+
+text-align:center;
+
+}
+
+.wrong{
+
+margin:20px 0;
+
+padding:15px;
+
+border-left:5px solid red;
+
+background:#3a3a3a;
+
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+font-size:20px;
+
+cursor:pointer;
+
+margin-top:20px;
+
+}
+/* ===============================
+   WRONG ANSWER CARD
+=============================== */
+
+.wrong{
+
+    background:#222;
+
+    padding:20px;
+
+    margin:20px 0;
+
+    border-radius:12px;
+
+}
+
+
+/* ===============================
+   QUESTION
+=============================== */
+
+.question-text{
+
+    color:white;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+
+/* ===============================
+   STUDENT WRONG ANSWER
+=============================== */
+
+.wrong-answer{
+
+    color:red;
+
+    font-size:18px;
+
+}
+
+
+/* ===============================
+   CORRECT ANSWER
+=============================== */
+
+.correct-answer{
+
+    color:lime;
+
+    font-size:18px;
+
+}

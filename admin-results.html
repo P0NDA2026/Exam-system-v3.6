@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="icon" type="image/x-icon" href="icons/adminresults.png">
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Admin Results</title>
+
+<link
+rel="stylesheet"
+href="css/admin-results.css"
+>
+
+
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+
+    <div class="header">
+
+
+ <button
+        id="backToAdmin"
+        type="button">
+
+            ← Back to Admin Panel
+
+        </button>
+
+
+
+
+
+        <h1>
+            Exam Results
+        </h1>
+
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SEARCH -->
+    <!-- ========================= -->
+
+    <div class="search-box">
+
+        <input
+        type="text"
+        id="searchResults"
+        placeholder="Search student by name..."
+        >
+
+
+ <button
+id="deleteAllResults"
+type="button">
+
+🗑 Delete All
+
+</button>
+
+
+    </div>
+
+   
+
+
+    <!-- ========================= -->
+    <!-- RESULTS TABLE -->
+    <!-- ========================= -->
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        #
+                    </th>
+
+                    <th>
+                        Student
+                    </th>
+
+                    <th>
+                        Stage
+                    </th>
+
+                    <th>
+                        Score
+                    </th>
+
+                    <th>
+                        Date
+                    </th>
+
+                    <th>
+                        Action
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody
+            id="resultsTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- NO RESULTS -->
+    <!-- ========================= -->
+
+    <div
+    id="noResults"
+    class="no-results">
+
+        No Results Found
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ====================================================== -->
+<!-- RESULT DETAILS MODAL -->
+<!-- ====================================================== -->
+
+<div id="resultModal" class="modal">
+
+    <div class="modal-content">
+
+        <button
+        id="closeModal"
+        class="close-modal"
+        type="button">
+
+            close
+
+        </button>
+
+        <h2 id="modalStudentName">
+            Student Details
+        </h2>
+
+        <div id="modalStudentInfo"></div>
+
+        <div id="modalWrongAnswers"></div>
+
+    </div>
+
+</div>
+
+
+</div>
+<!-- ========================= -->
+<!-- SCRIPT -->
+<!-- ========================= -->
+
+<script
+src="js/admin-results.js">
+</script>
+
+</body>
+
+</html>

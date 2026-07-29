@@ -1,0 +1,457 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+
+    background:#212121;
+
+    padding-top:120px;
+
+}
+
+/*================== CONTAINER ==================*/
+
+.container{
+    position:relative;
+    width:450px;
+    padding:40px;
+    border-radius:20px;
+    background:#2b2b2b;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+
+    overflow:hidden;
+}
+
+.container::before{
+    content:"";
+    position:absolute;
+    inset:-3px;
+    background:linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        violet,
+        red
+    );
+    background-size:300%;
+    animation:rgb 5s linear infinite;
+    z-index:-2;
+}
+
+.container::after{
+    content:"";
+    position:absolute;
+    inset:3px;
+    background:#2b2b2b;
+    border-radius:18px;
+    z-index:-1;
+}
+
+@keyframes rgb{
+    from{
+        background-position:0%;
+    }
+    to{
+        background-position:300%;
+    }
+}
+
+/*================== TITLE ==================*/
+
+.title{
+    color: #FFD700;
+    text-shadow:
+        0 0 5px #FFD700,
+        0 0 10px #FFD700,
+        0 0 20px rgba(255, 215, 0, 0.5);
+
+    font-size:30px;
+}
+
+.title2{
+    color: #FFD700;
+    text-shadow:
+        0 0 5px #FFD700,
+        0 0 10px #FFD700,
+        0 0 20px rgba(255, 217, 0, 0.562);
+
+    font-size:25px;
+
+}
+/*================== INPUT ==================*/
+
+.inputbox{
+    position:relative;
+    width:100%;
+}
+
+.inputbox input{
+    position:relative;
+    width:100%;
+    padding:20px 10px 10px;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:#23242a;
+    font-size:1em;
+    letter-spacing:.05em;
+    z-index:10;
+}
+
+.inputbox span{
+    position:absolute;
+    left:0;
+    top:0;
+    padding:20px 10px 10px;
+    color:#8f8f8f;
+    pointer-events:none;
+    transition:.5s;
+}
+
+.inputbox input:focus~span,
+.inputbox input:valid~span{
+    color:#45f3ff;
+    transform:translate(-10px,-34px);
+    font-size:.75em;
+}
+
+.inputbox i{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:2px;
+    background:#45f3ff;
+    border-radius:4px;
+    transition:.5s;
+    z-index:9;
+}
+
+.inputbox input:focus~i,
+.inputbox input:valid~i{
+    height:44px;
+}
+
+/*================== RADIO ==================*/
+
+.radio-input label{
+    position:relative;
+    z-index:1;
+}
+
+.radio-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-input * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.radio-input label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0px 20px;
+  width: 220px;
+  cursor: pointer;
+  height: 50px;
+  position: relative;
+}
+
+.radio-input label::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 45px;
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+.radio-input label:hover::before {
+  transition: all 0.2s ease;
+  background-color: #2a2e3c;
+}
+
+.radio-input .label:has(input:checked)::before {
+  background-color: #2d3750;
+  border-color: #435dd8;
+  height: 50px;
+}
+.radio-input .label .text {
+  color: #fff;
+}
+
+.radio-input .label input[type="radio"] {
+  background-color: #202030;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio-input .label input[type="radio"]:checked {
+  background-color: #435dd8;
+  -webkit-animation: puls 0.7s forwards;
+  animation: pulse 0.7s forwards;
+}
+
+.radio-input .label input[type="radio"]:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: #fff;
+  transform: scale(0);
+}
+
+.radio-input .label input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+.text{
+    color:white;
+}
+
+/*================== BUTTON ==================*/
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+    color:white;
+    background:dodgerblue;
+    transition:.3s;
+}
+
+button:hover{
+    background:linear-gradient(
+    90deg,
+    dodgerblue,
+    cyan);
+    transform:translateY(-2px);
+}
+
+button:active{
+    transform:scale(.98);
+}
+
+
+
+
+/* ======================================================
+LOGIN WRAPPER
+====================================================== */
+
+.login-wrapper{
+
+    position:relative;
+
+    width:450px;
+
+    min-height:700px;
+
+}
+
+/* ======================================================
+LOGIN CARDS
+====================================================== */
+
+.login-card{
+
+    position:absolute;
+
+    top:90px;
+
+    left: 0;
+
+    width:100%;
+
+    transition:
+   
+    
+
+    opacity .4s ease,
+
+    transform .4s ease,
+
+    visibility .4s;
+
+}
+
+.login-card.hidden{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transform:translateY(30px);
+
+}
+
+.login-card.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+
+    transform:translateY(0);
+
+}
+
+/* ======================================================
+STUDENT / ADMIN TOGGLE
+====================================================== */
+
+.pill-radio-container{
+
+    --main-color:#ff6ec4;
+    --secondary-color:#7873f5;
+    --text-color:#ddd;
+    --pill-bg:#1a1a1a;
+
+    display:flex;
+
+    position:absolute;
+
+    top: 10px ;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:var(--pill-bg);
+
+    border-radius:50px;
+
+    padding:8px;
+
+    gap:0;
+
+    width:340px;
+
+    justify-content:space-between;
+
+    box-shadow:
+    inset 0 0 20px rgba(0,0,0,.5);
+
+    z-index:100;
+
+}
+
+.pill-radio-container input{
+
+    display:none;
+
+}
+
+.pill-radio-container label{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:14px 0;
+
+    cursor:pointer;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    color:#bbb;
+
+    transition:.35s;
+
+    z-index:2;
+
+}
+
+.pill-radio-container input:checked+label{
+
+    color:#fff;
+
+}
+
+.pill-radio-container label:hover{
+
+    color:#fff;
+
+}
+
+.pill-indicator{
+
+    position:absolute;
+
+    top:8px;
+
+    left:8px;
+
+    width:calc(50% - 8px);
+
+    height:calc(100% - 16px);
+
+    border-radius:40px;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    var(--main-color),
+
+    var(--secondary-color)
+
+    );
+
+    transition:.35s;
+
+    z-index:1;
+
+}
+
+#studentMode:checked~.pill-indicator{
+
+    transform:translateX(0);
+
+}
+
+#adminMode:checked~.pill-indicator{
+
+    transform:translateX(100%);
+
+}

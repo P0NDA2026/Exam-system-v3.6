@@ -1,0 +1,403 @@
+/* ===============================
+   EXAM QUESTIONS
+=============================== */
+
+.question-card{
+
+    background:#222;
+
+    padding:20px;
+
+    margin:20px 0;
+
+    border-radius:12px;
+
+}
+
+
+/* Question Text */
+
+.question-card h2{
+
+    color:white;
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+}
+
+
+/* Answer Labels */
+
+.question-card label{
+
+    color:white;
+
+    font-size:18px;
+
+    display:block;
+
+    margin:12px 0;
+
+}
+
+/*===========================================
+=======================================*/
+
+/* =========================================================
+   NEON CHECKBOX - Optimized Version
+   ========================================================= */
+
+.neon-checkbox{
+    --primary:#00ffaa;
+    --primary-dark:#00cc88;
+    --size:24px;
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    width:100%;
+    margin:14px 0;
+
+    cursor:pointer;
+    user-select:none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+.neon-checkbox input{
+    display:none;
+}
+
+/* ========================================================= */
+
+.neon-checkbox__frame{
+    position:relative;
+    width:var(--size);
+    height:var(--size);
+    flex-shrink:0;
+}
+
+/* ========================================================= */
+
+.neon-checkbox__box{
+    position:absolute;
+    inset:0;
+
+    background:#111;
+
+    border:2px solid var(--primary-dark);
+
+    border-radius:6px;
+
+    transition:.25s;
+}
+
+/* ========================================================= */
+
+.neon-checkbox:hover .neon-checkbox__box{
+    border-color:var(--primary);
+    transform:scale(1.05);
+}
+
+/* ========================================================= */
+
+.neon-checkbox__check-container{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* ========================================================= */
+
+.neon-checkbox__check{
+
+    width:70%;
+    height:70%;
+
+    fill:none;
+
+    stroke:var(--primary);
+
+    stroke-width:3;
+
+    stroke-linecap:round;
+    stroke-linejoin:round;
+
+    stroke-dasharray:40;
+    stroke-dashoffset:40;
+
+    transition:.25s;
+}
+
+/* ========================================================= */
+
+.neon-checkbox__glow{
+
+    position:absolute;
+    inset:-2px;
+
+    border-radius:8px;
+
+    background:var(--primary);
+
+    filter:blur(4px);
+
+    opacity:0;
+
+    transition:.25s;
+}
+
+/* ========================================================= */
+
+.neon-checkbox__borders{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:6px;
+
+    overflow:hidden;
+}
+
+.neon-checkbox__borders span{
+
+    position:absolute;
+
+    background:var(--primary);
+
+    opacity:0;
+
+    transition:.25s;
+}
+
+/* Top */
+
+.neon-checkbox__borders span:nth-child(1){
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:1px;
+}
+
+/* Right */
+
+.neon-checkbox__borders span:nth-child(2){
+
+    right:0;
+    top:0;
+
+    width:1px;
+    height:100%;
+}
+
+/* Bottom */
+
+.neon-checkbox__borders span:nth-child(3){
+
+    bottom:0;
+    left:0;
+
+    width:100%;
+    height:1px;
+}
+
+/* Left */
+
+.neon-checkbox__borders span:nth-child(4){
+
+    left:0;
+    top:0;
+
+    width:1px;
+    height:100%;
+}
+
+/* =========================================================
+   CHECKED
+   ========================================================= */
+
+.neon-checkbox input:checked
+~
+.neon-checkbox__frame
+.neon-checkbox__box{
+
+    border-color:var(--primary);
+
+    background:rgba(0,255,170,.08);
+}
+
+.neon-checkbox input:checked
+~
+.neon-checkbox__frame
+.neon-checkbox__check{
+
+    stroke-dashoffset:0;
+}
+
+.neon-checkbox input:checked
+~
+.neon-checkbox__frame
+.neon-checkbox__glow{
+
+    opacity:.25;
+}
+
+.neon-checkbox input:checked
+~
+.neon-checkbox__frame
+.neon-checkbox__borders span{
+
+    opacity:1;
+}
+
+/* ========================================================= */
+
+.checkbox-label{
+
+    color:#fff;
+
+    font-size:18px;
+
+    line-height:1.5;
+
+    flex:1;
+}
+
+.neon-checkbox{
+    display:flex !important;
+    align-items:center;
+    gap:12px;
+    width:100%;
+}
+
+.neon-checkbox__frame{
+    width:24px;
+    height:24px;
+    flex:0 0 24px;
+}
+
+.checkbox-label{
+    display:inline-block;
+    color:#fff;
+    font-size:18px;
+    line-height:24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by srinivasaiml */ 
+.quantum-radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.radio-label {
+  color: aqua;
+}
+
+.quantum-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.quantum-radio .radio-control {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #4a4a8a;
+  border-radius: 50%;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.quantum-radio .radio-control::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: conic-gradient(
+    from 90deg,
+    #00ffcc,
+    #00b3ff,
+    #0066ff,
+    #00b3ff,
+    #00ffcc
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.quantum-radio:hover .radio-control {
+  border-color: #00ffcc;
+}
+
+.quantum-radio input:checked ~ .radio-control {
+  border-color: #00ffcc;
+}
+
+.quantum-radio input:checked ~ .radio-control::before {
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  animation: quantum-spin 2s linear infinite;
+}
+
+.quantum-radio input:checked ~ .radio-control::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: #00ffcc;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px #00ffcc;
+}
+
+@keyframes quantum-spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

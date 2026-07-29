@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="icon" type="image/x-icon" href="icons/exam.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>English Exam</title>
+
+<link rel="stylesheet" href="css/exam.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="exam-container">
+
+    <h1 class="title">
+        English Exam
+    </h1>
+
+    <h2 id="studentName"></h2>
+
+    <div class="timer">
+        <span id="time">15:00</span>
+    </div>
+
+    <div id="examMessage"></div>
+
+    <form id="examForm">
+
+        <div id="questionsContainer"></div>
+
+        <button type="submit">
+            Submit Exam
+        </button>
+
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="js/settings.js"></script>
+<script src="js/questions.js"></script>
+<script src="js/exam.js"></script>
+
+</body>
+</html>
